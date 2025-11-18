@@ -196,8 +196,9 @@
 
     <!-- Product Grid -->
     <div class="grid grid-cols-1 p-4 mx-auto max-w-7xl sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
+
       <!-- Product Card 1 -->
-      <div class="rounded-xl border border-gray-200 hover:shadow-lg transition">
+      <div class="group rounded-xl border border-gray-200 hover:shadow-lg transition">
         <div class="p-4 from-teal-200 to-teal-400 bg-gradient-to-br relative h-96 rounded-t-xl sm:h-80">
           <div></div>
           <div class="bg-red-500 rounded-full h-6 px-2 inline-block absoulte top-3 left-3">
@@ -210,7 +211,8 @@
                   d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
               </svg>
             </button>
-            <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
+            <button
+              class="translate-y-5 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition duration-200 w-10 aspect-square bg-white rounded-full flex justify-center items-center">
               <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -219,7 +221,8 @@
               </svg>
             </button>
           </div>
-          <button class="absolute w-36 text-white py-2 bg-teal-600 bottom-3 left-[50%] -translate-x-1/2 rounded-lg">장바구니
+          <button
+            class="translate-y-5 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition duration-200 absolute w-36 text-white py-2 bg-teal-600 bottom-3 left-[50%] -translate-x-1/2 rounded-lg">장바구니
             담기</button>
         </div>
         <div class="p-4 space-y-2">
@@ -240,12 +243,12 @@
         </div>
       </div>
 
-      <!-- TODO 7 cards -->
-      <div class="rounded-xl border border-gray-200 hover:shadow-lg transition">
-        <div class="p-4 from-teal-200 to-teal-400 bg-gradient-to-br relative h-96 rounded-t-xl sm:h-80">
+      <!-- Product Card 2 -->
+      <div class="group rounded-xl border border-gray-200 hover:shadow-lg transition">
+        <div class="p-4 from-blue-200 to-blue-400 bg-gradient-to-br relative h-96 rounded-t-xl sm:h-80">
           <div></div>
-          <div class="bg-red-500 rounded-full h-6 px-2 inline-block absoulte top-3 left-3">
-            <span class="text-xs text-white">30% OFF</span>
+          <div class="bg-blue-500 rounded-full h-6 px-2 inline-block absoulte top-3 left-3">
+            <span class="text-xs text-white">BEST</span>
           </div>
           <div class="absolute top-3 right-3 space-y-2">
             <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
@@ -254,7 +257,8 @@
                   d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
               </svg>
             </button>
-            <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
+            <button
+              class="translate-y-5 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition duration-200 w-10 aspect-square bg-white rounded-full flex justify-center items-center">
               <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -263,19 +267,112 @@
               </svg>
             </button>
           </div>
-          <button class="absolute w-36 text-white py-2 bg-teal-600 bottom-3 left-[50%] -translate-x-1/2 rounded-lg">장바구니
+          <button
+            class="translate-y-5 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition duration-200 absolute w-36 text-white py-2 bg-teal-600 bottom-3 left-[50%] -translate-x-1/2 rounded-lg">장바구니
             담기</button>
         </div>
         <div class="p-4 space-y-2">
           <div>
             <span>⭐</span>
-            <span>4.8</span>
-            <span class="text-sm text-gray-500">(234)</span>
+            <span>4.9</span>
+            <span class="text-sm text-gray-500">(567)</span>
           </div>
-          <h3 class="font-bold">프리미엄 무선 이어폰 Pro Max</h3>
+          <h3 class="font-bold">울트라 슬림 노트북 15.6인치</h3>
           <div class="flex items-center gap-2">
             <span class="text-teal-700 text-2xl font-bold">139,000원</span>
-            <span class="text-gray-400 text-xs line-through">199,000원</span>
+            <span class="text-gray-400 text-xs line-through hidden">139,000원</span>
+          </div>
+          <div class="flex justify-between text-xs">
+            <span class="text-gray-500">무료배송</span>
+            <span class="text-blue-700 bg-blue-100 rounded-full p-1">베스트</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 3 -->
+      <div class="group rounded-xl border border-gray-200 hover:shadow-lg transition">
+        <div class="p-4 from-pink-200 to-pink-400 bg-gradient-to-br relative h-96 rounded-t-xl sm:h-80">
+          <div></div>
+          <div class="bg-purple-500 rounded-full h-6 px-2 inline-block absoulte top-3 left-3">
+            <span class="text-xs text-white">NEW</span>
+          </div>
+          <div class="absolute top-3 right-3 space-y-2">
+            <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
+              <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+            <button
+              class="translate-y-5 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition duration-200 w-10 aspect-square bg-white rounded-full flex justify-center items-center">
+              <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </button>
+          </div>
+          <button
+            class="translate-y-5 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition duration-200 absolute w-36 text-white py-2 bg-teal-600 bottom-3 left-[50%] -translate-x-1/2 rounded-lg">장바구니
+            담기</button>
+        </div>
+        <div class="p-4 space-y-2">
+          <div>
+            <span>⭐</span>
+            <span>5.0</span>
+            <span class="text-sm text-gray-500">(89)</span>
+          </div>
+          <h3 class="font-bold">스마트워치 Series 7 GPS + Cellular</h3>
+          <div class="flex items-center gap-2">
+            <span class="text-teal-700 text-2xl font-bold">549,000원</span>
+            <span class="text-gray-400 text-xs line-through hidden">549,000원</span>
+          </div>
+          <div class="flex justify-between text-xs">
+            <span class="text-gray-500">무료배송</span>
+            <span class="text-purple-700 bg-purple-100 rounded-full p-1">신상</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 4 -->
+      <div class="group rounded-xl border border-gray-200 hover:shadow-lg transition">
+        <div class="p-4 from-orange-200 to-orange-400 bg-gradient-to-br relative h-96 rounded-t-xl sm:h-80">
+          <div></div>
+          <div class="bg-red-500 rounded-full h-6 px-2 inline-block absoulte top-3 left-3">
+            <span class="text-xs text-white">20% OFF</span>
+          </div>
+          <div class="absolute top-3 right-3 space-y-2">
+            <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
+              <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+            <button
+              class="translate-y-5 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition duration-200 w-10 aspect-square bg-white rounded-full flex justify-center items-center">
+              <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </button>
+          </div>
+          <button
+            class="translate-y-5 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition duration-200 absolute w-36 text-white py-2 bg-teal-600 bottom-3 left-[50%] -translate-x-1/2 rounded-lg">장바구니
+            담기</button>
+        </div>
+        <div class="p-4 space-y-2">
+          <div>
+            <span>⭐</span>
+            <span>4.7</span>
+            <span class="text-sm text-gray-500">(412)</span>
+          </div>
+          <h3 class="font-bold">태블릿 12.9인치 Wi-Fi 256GB</h3>
+          <div class="flex items-center gap-2">
+            <span class="text-teal-700 text-2xl font-bold">799,000원</span>
+            <span class="text-gray-400 text-xs line-through">999,000원</span>
           </div>
           <div class="flex justify-between text-xs">
             <span class="text-gray-500">무료배송</span>
@@ -283,11 +380,13 @@
           </div>
         </div>
       </div>
-      <div class="rounded-xl border border-gray-200 hover:shadow-lg transition">
-        <div class="p-4 from-teal-200 to-teal-400 bg-gradient-to-br relative h-96 rounded-t-xl sm:h-80">
+
+      <!-- Product Card 5 -->
+      <div class="group rounded-xl border border-gray-200 hover:shadow-lg transition">
+        <div class="p-4 from-cyan-200 to-cyan-400 bg-gradient-to-br relative h-96 rounded-t-xl sm:h-80">
           <div></div>
-          <div class="bg-red-500 rounded-full h-6 px-2 inline-block absoulte top-3 left-3">
-            <span class="text-xs text-white">30% OFF</span>
+          <div class="bg-red-500 rounded-full h-6 px-2 absoulte top-3 left-3 hidden">
+            <span class="text-xs text-white"></span>
           </div>
           <div class="absolute top-3 right-3 space-y-2">
             <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
@@ -296,7 +395,8 @@
                   d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
               </svg>
             </button>
-            <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
+            <button
+              class="translate-y-5 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition duration-200 w-10 aspect-square bg-white rounded-full flex justify-center items-center">
               <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -305,19 +405,19 @@
               </svg>
             </button>
           </div>
-          <button class="absolute w-36 text-white py-2 bg-teal-600 bottom-3 left-[50%] -translate-x-1/2 rounded-lg">장바구니
+          <button
+            class="translate-y-5 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition duration-200 absolute w-36 text-white py-2 bg-teal-600 bottom-3 left-[50%] -translate-x-1/2 rounded-lg">장바구니
             담기</button>
         </div>
         <div class="p-4 space-y-2">
           <div>
             <span>⭐</span>
-            <span>4.8</span>
-            <span class="text-sm text-gray-500">(234)</span>
+            <span>4.6</span>
+            <span class="text-sm text-gray-500">(198)</span>
           </div>
-          <h3 class="font-bold">프리미엄 무선 이어폰 Pro Max</h3>
+          <h3 class="font-bold">블루투스 스피커 포터블 방수</h3>
           <div class="flex items-center gap-2">
-            <span class="text-teal-700 text-2xl font-bold">139,000원</span>
-            <span class="text-gray-400 text-xs line-through">199,000원</span>
+            <span class="text-teal-700 text-2xl font-bold">89,000원</span>
           </div>
           <div class="flex justify-between text-xs">
             <span class="text-gray-500">무료배송</span>
@@ -325,11 +425,13 @@
           </div>
         </div>
       </div>
-      <div class="rounded-xl border border-gray-200 hover:shadow-lg transition">
-        <div class="p-4 from-teal-200 to-teal-400 bg-gradient-to-br relative h-96 rounded-t-xl sm:h-80">
+
+      <!-- Product Card 6 -->
+      <div class="group rounded-xl border border-gray-200 hover:shadow-lg transition">
+        <div class="p-4 from-rose-200 to-rose-400 bg-gradient-to-br relative h-96 rounded-t-xl sm:h-80">
           <div></div>
           <div class="bg-red-500 rounded-full h-6 px-2 inline-block absoulte top-3 left-3">
-            <span class="text-xs text-white">30% OFF</span>
+            <span class="text-xs text-white">15% OFF</span>
           </div>
           <div class="absolute top-3 right-3 space-y-2">
             <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
@@ -338,7 +440,8 @@
                   d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
               </svg>
             </button>
-            <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
+            <button
+              class="translate-y-5 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition duration-200 w-10 aspect-square bg-white rounded-full flex justify-center items-center">
               <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -347,19 +450,20 @@
               </svg>
             </button>
           </div>
-          <button class="absolute w-36 text-white py-2 bg-teal-600 bottom-3 left-[50%] -translate-x-1/2 rounded-lg">장바구니
+          <button
+            class="translate-y-5 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition duration-200 absolute w-36 text-white py-2 bg-teal-600 bottom-3 left-[50%] -translate-x-1/2 rounded-lg">장바구니
             담기</button>
         </div>
         <div class="p-4 space-y-2">
           <div>
             <span>⭐</span>
             <span>4.8</span>
-            <span class="text-sm text-gray-500">(234)</span>
+            <span class="text-sm text-gray-500">(345)</span>
           </div>
-          <h3 class="font-bold">프리미엄 무선 이어폰 Pro Max</h3>
+          <h3 class="font-bold">무선 충전기 15W 고속충전</h3>
           <div class="flex items-center gap-2">
-            <span class="text-teal-700 text-2xl font-bold">139,000원</span>
-            <span class="text-gray-400 text-xs line-through">199,000원</span>
+            <span class="text-teal-700 text-2xl font-bold">42,500원</span>
+            <span class="text-gray-400 text-xs line-through">50,000원</span>
           </div>
           <div class="flex justify-between text-xs">
             <span class="text-gray-500">무료배송</span>
@@ -367,11 +471,13 @@
           </div>
         </div>
       </div>
-      <div class="rounded-xl border border-gray-200 hover:shadow-lg transition">
-        <div class="p-4 from-teal-200 to-teal-400 bg-gradient-to-br relative h-96 rounded-t-xl sm:h-80">
+
+      <!-- Product Card 7 -->
+      <div class="group rounded-xl border border-gray-200 hover:shadow-lg transition">
+        <div class="p-4 from-yellow-200 to-yellow-400 bg-gradient-to-br relative h-96 rounded-t-xl sm:h-80">
           <div></div>
-          <div class="bg-red-500 rounded-full h-6 px-2 inline-block absoulte top-3 left-3">
-            <span class="text-xs text-white">30% OFF</span>
+          <div class="bg-red-500 rounded-full h-6 px-2 absoulte top-3 left-3 hidden">
+            <span class="text-xs text-white"></span>
           </div>
           <div class="absolute top-3 right-3 space-y-2">
             <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
@@ -380,7 +486,8 @@
                   d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
               </svg>
             </button>
-            <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
+            <button
+              class="translate-y-5 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition duration-200 w-10 aspect-square bg-white rounded-full flex justify-center items-center">
               <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -389,19 +496,20 @@
               </svg>
             </button>
           </div>
-          <button class="absolute w-36 text-white py-2 bg-teal-600 bottom-3 left-[50%] -translate-x-1/2 rounded-lg">장바구니
+          <button
+            class="translate-y-5 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition duration-200 absolute w-36 text-white py-2 bg-teal-600 bottom-3 left-[50%] -translate-x-1/2 rounded-lg">장바구니
             담기</button>
         </div>
         <div class="p-4 space-y-2">
           <div>
             <span>⭐</span>
-            <span>4.8</span>
-            <span class="text-sm text-gray-500">(234)</span>
+            <span>4.5</span>
+            <span class="text-sm text-gray-500">(276)</span>
           </div>
-          <h3 class="font-bold">프리미엄 무선 이어폰 Pro Max</h3>
+          <h3 class="font-bold">USB-C 멀티포트 허브 7in1</h3>
           <div class="flex items-center gap-2">
-            <span class="text-teal-700 text-2xl font-bold">139,000원</span>
-            <span class="text-gray-400 text-xs line-through">199,000원</span>
+            <span class="text-teal-700 text-2xl font-bold">35,000원</span>
+            <span class="text-gray-400 text-xs line-through hidden">35,000원</span>
           </div>
           <div class="flex justify-between text-xs">
             <span class="text-gray-500">무료배송</span>
@@ -409,11 +517,13 @@
           </div>
         </div>
       </div>
-      <div class="rounded-xl border border-gray-200 hover:shadow-lg transition">
-        <div class="p-4 from-teal-200 to-teal-400 bg-gradient-to-br relative h-96 rounded-t-xl sm:h-80">
+
+      <!-- Product Card 8 -->
+      <div class="group rounded-xl border border-gray-200 hover:shadow-lg transition">
+        <div class="p-4 from-gray-200 to-gray-400 bg-gradient-to-br relative h-96 rounded-t-xl sm:h-80">
           <div></div>
-          <div class="bg-red-500 rounded-full h-6 px-2 inline-block absoulte top-3 left-3">
-            <span class="text-xs text-white">30% OFF</span>
+          <div class="bg-gray-500 rounded-full h-6 px-2 inline-block absoulte top-3 left-3">
+            <span class="text-xs text-white">PREMIUM</span>
           </div>
           <div class="absolute top-3 right-3 space-y-2">
             <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
@@ -422,7 +532,8 @@
                   d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
               </svg>
             </button>
-            <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
+            <button
+              class="translate-y-5 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition duration-200 w-10 aspect-square bg-white rounded-full flex justify-center items-center">
               <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -431,107 +542,24 @@
               </svg>
             </button>
           </div>
-          <button class="absolute w-36 text-white py-2 bg-teal-600 bottom-3 left-[50%] -translate-x-1/2 rounded-lg">장바구니
+          <button
+            class="translate-y-5 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition duration-200 absolute w-36 text-white py-2 bg-teal-600 bottom-3 left-[50%] -translate-x-1/2 rounded-lg">장바구니
             담기</button>
         </div>
         <div class="p-4 space-y-2">
           <div>
             <span>⭐</span>
-            <span>4.8</span>
-            <span class="text-sm text-gray-500">(234)</span>
+            <span>4.9</span>
+            <span class="text-sm text-gray-500">(623)</span>
           </div>
-          <h3 class="font-bold">프리미엄 무선 이어폰 Pro Max</h3>
+          <h3 class="font-bold">노이즈캔슬링 헤드폰 프리미엄</h3>
           <div class="flex items-center gap-2">
-            <span class="text-teal-700 text-2xl font-bold">139,000원</span>
-            <span class="text-gray-400 text-xs line-through">199,000원</span>
+            <span class="text-teal-700 text-2xl font-bold">379,000원</span>
+            <span class="text-gray-400 text-xs line-through hidden">379,000원</span>
           </div>
           <div class="flex justify-between text-xs">
             <span class="text-gray-500">무료배송</span>
-            <span class="text-teal-700 bg-teal-100 rounded-full p-1">오늘 출발</span>
-          </div>
-        </div>
-      </div>
-      <div class="rounded-xl border border-gray-200 hover:shadow-lg transition">
-        <div class="p-4 from-teal-200 to-teal-400 bg-gradient-to-br relative h-96 rounded-t-xl sm:h-80">
-          <div></div>
-          <div class="bg-red-500 rounded-full h-6 px-2 inline-block absoulte top-3 left-3">
-            <span class="text-xs text-white">30% OFF</span>
-          </div>
-          <div class="absolute top-3 right-3 space-y-2">
-            <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
-              <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-              </svg>
-            </button>
-            <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
-              <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-              </svg>
-            </button>
-          </div>
-          <button class="absolute w-36 text-white py-2 bg-teal-600 bottom-3 left-[50%] -translate-x-1/2 rounded-lg">장바구니
-            담기</button>
-        </div>
-        <div class="p-4 space-y-2">
-          <div>
-            <span>⭐</span>
-            <span>4.8</span>
-            <span class="text-sm text-gray-500">(234)</span>
-          </div>
-          <h3 class="font-bold">프리미엄 무선 이어폰 Pro Max</h3>
-          <div class="flex items-center gap-2">
-            <span class="text-teal-700 text-2xl font-bold">139,000원</span>
-            <span class="text-gray-400 text-xs line-through">199,000원</span>
-          </div>
-          <div class="flex justify-between text-xs">
-            <span class="text-gray-500">무료배송</span>
-            <span class="text-teal-700 bg-teal-100 rounded-full p-1">오늘 출발</span>
-          </div>
-        </div>
-      </div>
-      <div class="rounded-xl border border-gray-200 hover:shadow-lg transition">
-        <div class="p-4 from-teal-200 to-teal-400 bg-gradient-to-br relative h-96 rounded-t-xl sm:h-80">
-          <div></div>
-          <div class="bg-red-500 rounded-full h-6 px-2 inline-block absoulte top-3 left-3">
-            <span class="text-xs text-white">30% OFF</span>
-          </div>
-          <div class="absolute top-3 right-3 space-y-2">
-            <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
-              <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-              </svg>
-            </button>
-            <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
-              <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-              </svg>
-            </button>
-          </div>
-          <button class="absolute w-36 text-white py-2 bg-teal-600 bottom-3 left-[50%] -translate-x-1/2 rounded-lg">장바구니
-            담기</button>
-        </div>
-        <div class="p-4 space-y-2">
-          <div>
-            <span>⭐</span>
-            <span>4.8</span>
-            <span class="text-sm text-gray-500">(234)</span>
-          </div>
-          <h3 class="font-bold">프리미엄 무선 이어폰 Pro Max</h3>
-          <div class="flex items-center gap-2">
-            <span class="text-teal-700 text-2xl font-bold">139,000원</span>
-            <span class="text-gray-400 text-xs line-through">199,000원</span>
-          </div>
-          <div class="flex justify-between text-xs">
-            <span class="text-gray-500">무료배송</span>
-            <span class="text-teal-700 bg-teal-100 rounded-full p-1">오늘 출발</span>
+            <span class="text-gray-700 bg-gray-100 rounded-full p-1">프리미엄</span>
           </div>
         </div>
       </div>
