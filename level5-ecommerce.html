@@ -1,760 +1,661 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TechStore - 최상급 과제</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap");
-      body {
-        font-family: "Noto Sans KR", sans-serif;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechStore - 최상급 과제</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap");
+
+    body {
+      font-family: "Noto Sans KR", sans-serif;
+    }
+
+    .scroll-smooth {
+      scroll-behavior: smooth;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
       }
-      .scroll-smooth {
-        scroll-behavior: smooth;
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
-      @keyframes slideUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      .animate-slide-up {
-        animation: slideUp 0.5s ease-out;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Top Bar -->
+    }
+
+    .animate-slide-up {
+      animation: slideUp 0.5s ease-out;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Top Bar -->
+  <div class="p-4 bg-black text-white text-center text-sm sm:p-2 sm:px-4">
+    <div class="flex justify-center">
+      <div class="flex flex-col gap-2 sm:flex-row sm:justify-between sm:flex-1">
+        <div class="flex gap-4 justify-center">
+          <span>🚚 무료배송</span>
+          <span class="hidden sm:block">|</span>
+          <span>📞 1588-1234</span>
+        </div>
+        <div class="flex gap-4 justify-center">
+          <a href="#">로그인</a>
+          <span>|</span>
+          <a href="#">회원가입</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <nav class="sticky top-0 w-full z-50 py-2 px-4 bg-white h-16">
+    <div>
+      <div class="flex justify-between">
+        <!-- Logo -->
+        <div class="flex gap-2 items-center">
+          <div
+            class="bg-green-500 aspect-square w-10 h-10 rounded-lg font-bold flex justify-center items-center text-white">
+            <span>T</span>
+          </div>
+          <span class="text-2xl font-bold">TechStore</span>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex md:items-center md:gap-8 md:text-gray-500">
+          <a href="#">신제품</a>
+          <a href="#">베스트</a>
+          <a href="#">특가</a>
+          <a href="#">이벤트</a>
+        </div>
+
+        <!-- Right Icons -->
+        <div class="flex gap-4 text-gray-500">
+          <button>
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </button>
+          <button>
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+          </button>
+          <button class="relative">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+            <span
+              class="bg-green-500 absolute top-2 right-0 rounded-full text-white w-4 h-4 text-xs flex justify-center items-center">3</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Carousel -->
+  <div class="from-teal-400 to-teal-600 bg-gradient-to-r py-8 px-4 sm:py-16 sm:px-8">
     <div>
       <div>
-        <div>
-          <div>
-            <span>🚚 무료배송</span>
-            <span>|</span>
-            <span>📞 1588-1234</span>
+        <div class="text-white">
+          <div class="bg-teal-300 rounded-full py-2 px-4 inline-block text-sm">🎉 신제품 출시</div>
+          <h1 class="text-3xl my-4 font-extrabold sm:text-5xl">
+            혁신적인<br />
+            무선 이어폰
+          </h1>
+          <p class="text-xl mb-8">프리미엄 사운드를 경험하세요</p>
+          <div class="flex flex-col text-lg gap-4 font-bold sm:flex-row">
+            <button class="rounded-lg border-white bg-white text-teal-500 py-4 sm:px-8">지금 구매하기</button>
+            <button class="rounded-lg border-white border-2 py-4 sm:px-8">자세히 보기</button>
           </div>
-          <div>
-            <a href="#">로그인</a>
-            <span>|</span>
-            <a href="#">회원가입</a>
-          </div>
+        </div>
+        <div class="flex justify-center items-center mx-4 mt-8 mb-4">
+          <div class="rounded-3xl bg-white/50 aspect-square w-80"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Category Tabs -->
+  <div class="sticky top-16 z-50 bg-white">
+    <div>
+      <div class="whitespace-nowrap overflow-scroll overflow-y-hidden p-4">
+        <button class="rounded-full bg-green-700 text-white py-2 px-6">전체</button>
+        <button class="rounded-full bg-gray-100 py-2 px-6">스마트폰</button>
+        <button class="rounded-full bg-gray-100 py-2 px-6">노트북</button>
+        <button class="rounded-full bg-gray-100 py-2 px-6">태블릿</button>
+        <button class="rounded-full bg-gray-100 py-2 px-6">웨어러블</button>
+        <button class="rounded-full bg-gray-100 py-2 px-6">오디오</button>
+        <button class="rounded-full bg-gray-100 py-2 px-6">액세서리</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="pb-32">
+    <!-- Special Offers Banner -->
+    <div class="text-white md:flex">
+      <div class="rounded-2xl from-blue-600 to-blue-800 bg-gradient-to-br p-8 m-4 relative overflow-hidden md:flex-1">
+        <div class="aspect-square w-36 absolute bg-white/20 top-[-25%] rounded-full right-[-15%]"></div>
+        <div class="space-y-4">
+          <span class="bg-white/20 rounded-full text-sm py-1 px-3">한정 특가</span>
+          <h3 class="text-3xl font-bold">스마트워치</h3>
+          <p>최대 30% 할인</p>
+          <button class="bg-white text-blue-700 rounded-lg py-2 px-6">보러가기 →</button>
+        </div>
+      </div>
+
+      <div
+        class="rounded-2xl from-purple-600 to-purple-800 bg-gradient-to-br p-8 m-4 relative overflow-hidden md:flex-1">
+        <div class="aspect-square w-36 absolute bg-white/20 top-[-25%] rounded-full right-[-15%]"></div>
+        <div class="space-y-4">
+          <span class="bg-white/20 rounded-full text-sm py-1 px-3">신규 출시</span>
+          <h3 class="text-3xl font-bold">게이밍 노트북</h3>
+          <p>사은품 증정</p>
+          <button class="bg-white text-purple-700 rounded-lg py-2 px-6">보러가기 →</button>
         </div>
       </div>
     </div>
 
-    <!-- Main Navigation -->
-    <nav>
-      <div>
-        <div>
-          <!-- Logo -->
+    <!-- Filter & Sort -->
+    <div class="m-4 sm:flex sm:justify-between">
+      <div class="space-y-2">
+        <h2 class="text-3xl font-bold">인기 상품</h2>
+        <p>지금 가장 많이 판매되는 제품들</p>
+      </div>
+      <div class="my-4 flex gap-4">
+        <select class="h-10 border-gray-400 rounded-md border px-4 text-sm">
+          <option>인기순</option>
+          <option>최신순</option>
+          <option>낮은 가격순</option>
+          <option>높은 가격순</option>
+          <option>할인율순</option>
+        </select>
+        <button class="aspect-square h-10 border-gray-400 rounded-md border flex justify-center items-center">
+          <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <button class="aspect-square h-10 border-gray-400 rounded-md border flex justify-center items-center">
+          <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="grid grid-cols-1 p-4 sm:grid-cols-2 sm:gap-4">
+      <!-- Product Card 1 -->
+      <div class="rounded-xl border border-gray-200 hover:shadow-lg transition">
+        <div class="p-4 from-teal-200 to-teal-400 bg-gradient-to-br relative h-96 rounded-t-xl sm:h-80">
+          <div></div>
+          <div class="bg-red-500 rounded-full h-6 px-2 inline-block absoulte top-3 left-3">
+            <span class="text-xs text-white">30% OFF</span>
+          </div>
+          <div class="absolute top-3 right-3 space-y-2">
+            <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
+              <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+            <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
+              <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </button>
+          </div>
+          <button class="absolute w-36 text-white py-2 bg-teal-600 bottom-3 left-[50%] -translate-x-1/2 rounded-lg">장바구니
+            담기</button>
+        </div>
+        <div class="p-4 space-y-2">
           <div>
-            <div>
+            <span>⭐</span>
+            <span>4.8</span>
+            <span class="text-sm text-gray-500">(234)</span>
+          </div>
+          <h3 class="font-bold">프리미엄 무선 이어폰 Pro Max</h3>
+          <div class="flex items-center gap-2">
+            <span class="text-teal-700 text-2xl font-bold">139,000원</span>
+            <span class="text-gray-400 text-xs line-through">199,000원</span>
+          </div>
+          <div class="flex justify-between text-xs">
+            <span class="text-gray-500">무료배송</span>
+            <span class="text-teal-700 bg-teal-100 rounded-full p-1">오늘 출발</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TODO 7 cards -->
+      <div class="rounded-xl border border-gray-200 hover:shadow-lg transition">
+        <div class="p-4 from-teal-200 to-teal-400 bg-gradient-to-br relative h-96 rounded-t-xl sm:h-80">
+          <div></div>
+          <div class="bg-red-500 rounded-full h-6 px-2 inline-block absoulte top-3 left-3">
+            <span class="text-xs text-white">30% OFF</span>
+          </div>
+          <div class="absolute top-3 right-3 space-y-2">
+            <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
+              <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+            <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
+              <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </button>
+          </div>
+          <button class="absolute w-36 text-white py-2 bg-teal-600 bottom-3 left-[50%] -translate-x-1/2 rounded-lg">장바구니
+            담기</button>
+        </div>
+        <div class="p-4 space-y-2">
+          <div>
+            <span>⭐</span>
+            <span>4.8</span>
+            <span class="text-sm text-gray-500">(234)</span>
+          </div>
+          <h3 class="font-bold">프리미엄 무선 이어폰 Pro Max</h3>
+          <div class="flex items-center gap-2">
+            <span class="text-teal-700 text-2xl font-bold">139,000원</span>
+            <span class="text-gray-400 text-xs line-through">199,000원</span>
+          </div>
+          <div class="flex justify-between text-xs">
+            <span class="text-gray-500">무료배송</span>
+            <span class="text-teal-700 bg-teal-100 rounded-full p-1">오늘 출발</span>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-xl border border-gray-200 hover:shadow-lg transition">
+        <div class="p-4 from-teal-200 to-teal-400 bg-gradient-to-br relative h-96 rounded-t-xl sm:h-80">
+          <div></div>
+          <div class="bg-red-500 rounded-full h-6 px-2 inline-block absoulte top-3 left-3">
+            <span class="text-xs text-white">30% OFF</span>
+          </div>
+          <div class="absolute top-3 right-3 space-y-2">
+            <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
+              <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+            <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
+              <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </button>
+          </div>
+          <button class="absolute w-36 text-white py-2 bg-teal-600 bottom-3 left-[50%] -translate-x-1/2 rounded-lg">장바구니
+            담기</button>
+        </div>
+        <div class="p-4 space-y-2">
+          <div>
+            <span>⭐</span>
+            <span>4.8</span>
+            <span class="text-sm text-gray-500">(234)</span>
+          </div>
+          <h3 class="font-bold">프리미엄 무선 이어폰 Pro Max</h3>
+          <div class="flex items-center gap-2">
+            <span class="text-teal-700 text-2xl font-bold">139,000원</span>
+            <span class="text-gray-400 text-xs line-through">199,000원</span>
+          </div>
+          <div class="flex justify-between text-xs">
+            <span class="text-gray-500">무료배송</span>
+            <span class="text-teal-700 bg-teal-100 rounded-full p-1">오늘 출발</span>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-xl border border-gray-200 hover:shadow-lg transition">
+        <div class="p-4 from-teal-200 to-teal-400 bg-gradient-to-br relative h-96 rounded-t-xl sm:h-80">
+          <div></div>
+          <div class="bg-red-500 rounded-full h-6 px-2 inline-block absoulte top-3 left-3">
+            <span class="text-xs text-white">30% OFF</span>
+          </div>
+          <div class="absolute top-3 right-3 space-y-2">
+            <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
+              <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+            <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
+              <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </button>
+          </div>
+          <button class="absolute w-36 text-white py-2 bg-teal-600 bottom-3 left-[50%] -translate-x-1/2 rounded-lg">장바구니
+            담기</button>
+        </div>
+        <div class="p-4 space-y-2">
+          <div>
+            <span>⭐</span>
+            <span>4.8</span>
+            <span class="text-sm text-gray-500">(234)</span>
+          </div>
+          <h3 class="font-bold">프리미엄 무선 이어폰 Pro Max</h3>
+          <div class="flex items-center gap-2">
+            <span class="text-teal-700 text-2xl font-bold">139,000원</span>
+            <span class="text-gray-400 text-xs line-through">199,000원</span>
+          </div>
+          <div class="flex justify-between text-xs">
+            <span class="text-gray-500">무료배송</span>
+            <span class="text-teal-700 bg-teal-100 rounded-full p-1">오늘 출발</span>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-xl border border-gray-200 hover:shadow-lg transition">
+        <div class="p-4 from-teal-200 to-teal-400 bg-gradient-to-br relative h-96 rounded-t-xl sm:h-80">
+          <div></div>
+          <div class="bg-red-500 rounded-full h-6 px-2 inline-block absoulte top-3 left-3">
+            <span class="text-xs text-white">30% OFF</span>
+          </div>
+          <div class="absolute top-3 right-3 space-y-2">
+            <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
+              <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+            <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
+              <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </button>
+          </div>
+          <button class="absolute w-36 text-white py-2 bg-teal-600 bottom-3 left-[50%] -translate-x-1/2 rounded-lg">장바구니
+            담기</button>
+        </div>
+        <div class="p-4 space-y-2">
+          <div>
+            <span>⭐</span>
+            <span>4.8</span>
+            <span class="text-sm text-gray-500">(234)</span>
+          </div>
+          <h3 class="font-bold">프리미엄 무선 이어폰 Pro Max</h3>
+          <div class="flex items-center gap-2">
+            <span class="text-teal-700 text-2xl font-bold">139,000원</span>
+            <span class="text-gray-400 text-xs line-through">199,000원</span>
+          </div>
+          <div class="flex justify-between text-xs">
+            <span class="text-gray-500">무료배송</span>
+            <span class="text-teal-700 bg-teal-100 rounded-full p-1">오늘 출발</span>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-xl border border-gray-200 hover:shadow-lg transition">
+        <div class="p-4 from-teal-200 to-teal-400 bg-gradient-to-br relative h-96 rounded-t-xl sm:h-80">
+          <div></div>
+          <div class="bg-red-500 rounded-full h-6 px-2 inline-block absoulte top-3 left-3">
+            <span class="text-xs text-white">30% OFF</span>
+          </div>
+          <div class="absolute top-3 right-3 space-y-2">
+            <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
+              <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+            <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
+              <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </button>
+          </div>
+          <button class="absolute w-36 text-white py-2 bg-teal-600 bottom-3 left-[50%] -translate-x-1/2 rounded-lg">장바구니
+            담기</button>
+        </div>
+        <div class="p-4 space-y-2">
+          <div>
+            <span>⭐</span>
+            <span>4.8</span>
+            <span class="text-sm text-gray-500">(234)</span>
+          </div>
+          <h3 class="font-bold">프리미엄 무선 이어폰 Pro Max</h3>
+          <div class="flex items-center gap-2">
+            <span class="text-teal-700 text-2xl font-bold">139,000원</span>
+            <span class="text-gray-400 text-xs line-through">199,000원</span>
+          </div>
+          <div class="flex justify-between text-xs">
+            <span class="text-gray-500">무료배송</span>
+            <span class="text-teal-700 bg-teal-100 rounded-full p-1">오늘 출발</span>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-xl border border-gray-200 hover:shadow-lg transition">
+        <div class="p-4 from-teal-200 to-teal-400 bg-gradient-to-br relative h-96 rounded-t-xl sm:h-80">
+          <div></div>
+          <div class="bg-red-500 rounded-full h-6 px-2 inline-block absoulte top-3 left-3">
+            <span class="text-xs text-white">30% OFF</span>
+          </div>
+          <div class="absolute top-3 right-3 space-y-2">
+            <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
+              <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+            <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
+              <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </button>
+          </div>
+          <button class="absolute w-36 text-white py-2 bg-teal-600 bottom-3 left-[50%] -translate-x-1/2 rounded-lg">장바구니
+            담기</button>
+        </div>
+        <div class="p-4 space-y-2">
+          <div>
+            <span>⭐</span>
+            <span>4.8</span>
+            <span class="text-sm text-gray-500">(234)</span>
+          </div>
+          <h3 class="font-bold">프리미엄 무선 이어폰 Pro Max</h3>
+          <div class="flex items-center gap-2">
+            <span class="text-teal-700 text-2xl font-bold">139,000원</span>
+            <span class="text-gray-400 text-xs line-through">199,000원</span>
+          </div>
+          <div class="flex justify-between text-xs">
+            <span class="text-gray-500">무료배송</span>
+            <span class="text-teal-700 bg-teal-100 rounded-full p-1">오늘 출발</span>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-xl border border-gray-200 hover:shadow-lg transition">
+        <div class="p-4 from-teal-200 to-teal-400 bg-gradient-to-br relative h-96 rounded-t-xl sm:h-80">
+          <div></div>
+          <div class="bg-red-500 rounded-full h-6 px-2 inline-block absoulte top-3 left-3">
+            <span class="text-xs text-white">30% OFF</span>
+          </div>
+          <div class="absolute top-3 right-3 space-y-2">
+            <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
+              <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+            <button class="w-10 aspect-square bg-white rounded-full flex justify-center items-center">
+              <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </button>
+          </div>
+          <button class="absolute w-36 text-white py-2 bg-teal-600 bottom-3 left-[50%] -translate-x-1/2 rounded-lg">장바구니
+            담기</button>
+        </div>
+        <div class="p-4 space-y-2">
+          <div>
+            <span>⭐</span>
+            <span>4.8</span>
+            <span class="text-sm text-gray-500">(234)</span>
+          </div>
+          <h3 class="font-bold">프리미엄 무선 이어폰 Pro Max</h3>
+          <div class="flex items-center gap-2">
+            <span class="text-teal-700 text-2xl font-bold">139,000원</span>
+            <span class="text-gray-400 text-xs line-through">199,000원</span>
+          </div>
+          <div class="flex justify-between text-xs">
+            <span class="text-gray-500">무료배송</span>
+            <span class="text-teal-700 bg-teal-100 rounded-full p-1">오늘 출발</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Load More Button -->
+    <div class="flex justify-center">
+      <button class="rounded-lg bg-gray-200 py-3 px-6 mt-8">더 많은 상품 보기</button>
+    </div>
+  </div>
+
+  <!-- Newsletter Section -->
+  <div class="bg-gray-800 text-white text-center py-16 px-2">
+    <div>
+      <div class="space-y-4 m-4">
+        <h3 class="text-3xl font-bold">뉴스레터 구독</h3>
+        <p class="font-light">최신 제품 소식과 특별 할인 정보를 받아보세요</p>
+      </div>
+      <div>
+        <div class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 md:mx-16">
+          <input class="p-4 rounded-lg sm:flex-[4] sm:mx-2 sm:ml-4" type="email" placeholder="이메일 주소를 입력하세요" />
+          <button class="bg-green-600 p-4 rounded-lg sm:flex-1 sm:mx-2 sm:mr-4">구독하기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="divide-y divide-gray-500 p-6 space-y-8">
+      <div class="space-y-12 md:grid md:grid-cols-2 md:grid-rows-2 md:space-y-0 md:gap-8">
+        <div class="space-y-2">
+          <div class="flex gap-2">
+            <div
+              class="bg-green-500 aspect-square w-10 h-10 rounded-lg font-bold flex justify-center items-center text-white">
               <span>T</span>
             </div>
-            <span>TechStore</span>
+            <span class="text-2xl font-bold">TechStore</span>
           </div>
-
-          <!-- Desktop Navigation -->
-          <div>
-            <a href="#">신제품</a>
-            <a href="#">베스트</a>
-            <a href="#">특가</a>
-            <a href="#">이벤트</a>
-          </div>
-
-          <!-- Right Icons -->
-          <div>
-            <button>
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
-            </button>
-            <button>
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                />
-              </svg>
-            </button>
-            <button>
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                />
-              </svg>
-              <span>3</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Hero Carousel -->
-    <div>
-      <div>
-        <div>
-          <div>
-            <div>🎉 신제품 출시</div>
-            <h1>
-              혁신적인<br />
-              무선 이어폰
-            </h1>
-            <p>프리미엄 사운드를 경험하세요</p>
-            <div>
-              <button>지금 구매하기</button>
-              <button>자세히 보기</button>
-            </div>
-          </div>
-          <div>
-            <div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Category Tabs -->
-    <div>
-      <div>
-        <div>
-          <button>전체</button>
-          <button>스마트폰</button>
-          <button>노트북</button>
-          <button>태블릿</button>
-          <button>웨어러블</button>
-          <button>오디오</button>
-          <button>액세서리</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Main Content -->
-    <div>
-      <!-- Special Offers Banner -->
-      <div>
-        <div>
-          <div></div>
-          <div>
-            <span>한정 특가</span>
-            <h3>스마트워치</h3>
-            <p>최대 30% 할인</p>
-            <button>보러가기 →</button>
+          <p class="text-sm">프리미엄 테크 제품을 만나보세요</p>
+          <div class="flex gap-4">
+            <a class="bg-white/10 rounded-full aspect-square h-10 flex justify-center items-center" href="#">
+              <span>📘</span>
+            </a>
+            <a class="bg-white/10 rounded-full aspect-square h-10 flex justify-center items-center" href="#">
+              <span>📷</span>
+            </a>
+            <a class="bg-white/10 rounded-full aspect-square h-10 flex justify-center items-center" href="#">
+              <span>🐦</span>
+            </a>
           </div>
         </div>
 
         <div>
-          <div></div>
-          <div>
-            <span>신규 출시</span>
-            <h3>게이밍 노트북</h3>
-            <p>사은품 증정</p>
-            <button>보러가기 →</button>
-          </div>
+          <h4 class="my-4 md:mt-0">쇼핑 정보</h4>
+          <ul class="space-y-2 text-sm font-light">
+            <li>
+              <a href="#">배송 안내</a>
+            </li>
+            <li>
+              <a href="#">교환 및 반품</a>
+            </li>
+            <li>
+              <a href="#">결제 방법</a>
+            </li>
+            <li>
+              <a href="#">적립금 제도</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="my-4 md:mt-0">고객 서비스</h4>
+          <ul class="space-y-2 text-sm font-light">
+            <li>
+              <a href="#">공지사항</a>
+            </li>
+            <li>
+              <a href="#">자주 묻는 질문</a>
+            </li>
+            <li>
+              <a href="#">1:1 문의</a>
+            </li>
+            <li>
+              <a href="#">매장 안내</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="font-bold mb-2">고객센터</h4>
+          <p class="text-2xl font-bold">1588-1234</p>
+          <p class="text-sm">평일 09:00 - 18:00<br />주말 및 공휴일 휴무</p>
+          <button class="text-sm bg-gray-800 px-4 py-2 rounded-lg">카카오톡 상담</button>
         </div>
       </div>
 
-      <!-- Filter & Sort -->
-      <div>
-        <div>
-          <h2>인기 상품</h2>
-          <p>지금 가장 많이 판매되는 제품들</p>
-        </div>
-        <div>
-          <select>
-            <option>인기순</option>
-            <option>최신순</option>
-            <option>낮은 가격순</option>
-            <option>높은 가격순</option>
-            <option>할인율순</option>
-          </select>
-          <button>
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
-          <button>
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <!-- Product Grid -->
-      <div>
-        <!-- Product Card 1 -->
-        <div>
-          <div>
-            <div></div>
-            <div>
-              <span>30% OFF</span>
-            </div>
-            <div>
-              <button>
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                  />
-                </svg>
-              </button>
-              <button>
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                  />
-                </svg>
-              </button>
-            </div>
-            <button>장바구니 담기</button>
-          </div>
-          <div>
-            <div>
-              <span>⭐</span>
-              <span>4.8</span>
-              <span>(234)</span>
-            </div>
-            <h3>프리미엄 무선 이어폰 Pro Max</h3>
-            <div>
-              <span>139,000원</span>
-              <span>199,000원</span>
-            </div>
-            <div>
-              <span>무료배송</span>
-              <span>오늘 출발</span>
-            </div>
+      <div class="text-gray-300 text-sm space-y-4">
+        <div class="text-center mt-4 space-y-4 md:flex md:justify-between md:items-center md:space-y-0">
+          <p>© 2024 TechStore. All rights reserved.</p>
+          <div class="space-x-4 md:flex">
+            <a href="#">이용약관</a>
+            <a href="#">개인정보처리방침</a>
+            <a href="#">사업자정보</a>
           </div>
         </div>
-
-        <!-- Product Card 2 -->
-        <div>
-          <div>
-            <div></div>
-            <div>
-              <span>BEST</span>
-            </div>
-            <div>
-              <button>
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                  />
-                </svg>
-              </button>
-              <button>
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                  />
-                </svg>
-              </button>
-            </div>
-            <button>장바구니 담기</button>
-          </div>
-          <div>
-            <div>
-              <span>⭐</span>
-              <span>4.9</span>
-              <span>(567)</span>
-            </div>
-            <h3>울트라 슬림 노트북 15.6인치</h3>
-            <div>
-              <span>1,299,000원</span>
-            </div>
-            <div>
-              <span>무료배송</span>
-              <span>베스트</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product Card 3 -->
-        <div>
-          <div>
-            <div></div>
-            <div>
-              <span>NEW</span>
-            </div>
-            <div>
-              <button>
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                  />
-                </svg>
-              </button>
-              <button>
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                  />
-                </svg>
-              </button>
-            </div>
-            <button>장바구니 담기</button>
-          </div>
-          <div>
-            <div>
-              <span>⭐</span>
-              <span>5.0</span>
-              <span>(89)</span>
-            </div>
-            <h3>스마트워치 Series 7 GPS + Cellular</h3>
-            <div>
-              <span>549,000원</span>
-            </div>
-            <div>
-              <span>무료배송</span>
-              <span>신상</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product Card 4 -->
-        <div>
-          <div>
-            <div></div>
-            <div>
-              <span>20% OFF</span>
-            </div>
-            <div>
-              <button>
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                  />
-                </svg>
-              </button>
-              <button>
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                  />
-                </svg>
-              </button>
-            </div>
-            <button>장바구니 담기</button>
-          </div>
-          <div>
-            <div>
-              <span>⭐</span>
-              <span>4.7</span>
-              <span>(412)</span>
-            </div>
-            <h3>태블릿 12.9인치 Wi-Fi 256GB</h3>
-            <div>
-              <span>799,000원</span>
-              <span>999,000원</span>
-            </div>
-            <div>
-              <span>무료배송</span>
-              <span>오늘 출발</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product Card 5 -->
-        <div>
-          <div>
-            <div></div>
-            <div>
-              <button>
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                  />
-                </svg>
-              </button>
-              <button>
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                  />
-                </svg>
-              </button>
-            </div>
-            <button>장바구니 담기</button>
-          </div>
-          <div>
-            <div>
-              <span>⭐</span>
-              <span>4.6</span>
-              <span>(198)</span>
-            </div>
-            <h3>블루투스 스피커 포터블 방수</h3>
-            <div>
-              <span>89,000원</span>
-            </div>
-            <div>
-              <span>무료배송</span>
-              <span>오늘 출발</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product Card 6 -->
-        <div>
-          <div>
-            <div></div>
-            <div>
-              <span>15% OFF</span>
-            </div>
-            <div>
-              <button>
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                  />
-                </svg>
-              </button>
-              <button>
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                  />
-                </svg>
-              </button>
-            </div>
-            <button>장바구니 담기</button>
-          </div>
-          <div>
-            <div>
-              <span>⭐</span>
-              <span>4.8</span>
-              <span>(345)</span>
-            </div>
-            <h3>무선 충전기 15W 고속충전</h3>
-            <div>
-              <span>42,500원</span>
-              <span>50,000원</span>
-            </div>
-            <div>
-              <span>무료배송</span>
-              <span>오늘 출발</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product Card 7 -->
-        <div>
-          <div>
-            <div></div>
-            <div>
-              <button>
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                  />
-                </svg>
-              </button>
-              <button>
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                  />
-                </svg>
-              </button>
-            </div>
-            <button>장바구니 담기</button>
-          </div>
-          <div>
-            <div>
-              <span>⭐</span>
-              <span>4.5</span>
-              <span>(276)</span>
-            </div>
-            <h3>USB-C 멀티포트 허브 7in1</h3>
-            <div>
-              <span>35,000원</span>
-            </div>
-            <div>
-              <span>무료배송</span>
-              <span>오늘 출발</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product Card 8 -->
-        <div>
-          <div>
-            <div></div>
-            <div>
-              <span>PREMIUM</span>
-            </div>
-            <div>
-              <button>
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                  />
-                </svg>
-              </button>
-              <button>
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                  />
-                </svg>
-              </button>
-            </div>
-            <button>장바구니 담기</button>
-          </div>
-          <div>
-            <div>
-              <span>⭐</span>
-              <span>4.9</span>
-              <span>(623)</span>
-            </div>
-            <h3>노이즈캔슬링 헤드폰 프리미엄</h3>
-            <div>
-              <span>379,000원</span>
-            </div>
-            <div>
-              <span>무료배송</span>
-              <span>프리미엄</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Load More Button -->
-      <div>
-        <button>더 많은 상품 보기</button>
-      </div>
-    </div>
-
-    <!-- Newsletter Section -->
-    <div>
-      <div>
-        <div>
-          <h3>뉴스레터 구독</h3>
-          <p>최신 제품 소식과 특별 할인 정보를 받아보세요</p>
-        </div>
-        <div>
-          <div>
-            <input type="email" placeholder="이메일 주소를 입력하세요" />
-            <button>구독하기</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-      <div>
-        <div>
-          <div>
-            <div>
-              <div>
-                <span>T</span>
-              </div>
-              <span>TechStore</span>
-            </div>
-            <p>프리미엄 테크 제품을 만나보세요</p>
-            <div>
-              <a href="#">
-                <span>📘</span>
-              </a>
-              <a href="#">
-                <span>📷</span>
-              </a>
-              <a href="#">
-                <span>🐦</span>
-              </a>
-            </div>
-          </div>
-
-          <div>
-            <h4>쇼핑 정보</h4>
-            <ul>
-              <li>
-                <a href="#">배송 안내</a>
-              </li>
-              <li>
-                <a href="#">교환 및 반품</a>
-              </li>
-              <li>
-                <a href="#">결제 방법</a>
-              </li>
-              <li>
-                <a href="#">적립금 제도</a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4>고객 서비스</h4>
-            <ul>
-              <li>
-                <a href="#">공지사항</a>
-              </li>
-              <li>
-                <a href="#">자주 묻는 질문</a>
-              </li>
-              <li>
-                <a href="#">1:1 문의</a>
-              </li>
-              <li>
-                <a href="#">매장 안내</a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4>고객센터</h4>
-            <p>1588-1234</p>
-            <p>평일 09:00 - 18:00<br />주말 및 공휴일 휴무</p>
-            <button>카카오톡 상담</button>
-          </div>
-        </div>
-
-        <div>
-          <div>
-            <p>© 2024 TechStore. All rights reserved.</p>
-            <div>
-              <a href="#">이용약관</a>
-              <a href="#">개인정보처리방침</a>
-              <a href="#">사업자정보</a>
-            </div>
-          </div>
-          <p>
-            만든 사람:
-            <span>[이름을 입력하세요]</span>2025 · 가히의 TailwindCSS 과제
+        <div class="flex justify-between text-gray-500 text-xs mx-20">
+          <p>만든 사람:
+            <span class="text-gray-300">Catailog</span>
           </p>
+          <p>2025 · 가히의 TailwindCSS 과제</p>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <!-- Scroll to Top Button -->
-    <button>
-      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M5 10l7-7m0 0l7 7m-7-7v18"
-        />
-      </svg>
-    </button>
-  </body>
+  <!-- Scroll to Top Button -->
+  <button
+    class="fixed right-8 bottom-8 rounded-full bg-green-500 text-white w-14 h-14 flex justify-center items-center">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+</body>
+
 </html>
